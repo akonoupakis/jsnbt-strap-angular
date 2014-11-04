@@ -1,0 +1,40 @@
+{
+  "name": "jsnbt-tmpl",
+  "version": "1.0.0",
+  "homepage": "",
+  "authors": [
+    
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.3.0"
+  },
+  "deploy": {
+    "jquery": {
+      "files": [
+        {
+          "src": "jquery/dist/jquery.js",
+          "dest": [
+            "js/lib/a-jquery.js"
+          ]
+        }
+      ]
+    },
+    "angular": {
+      "files": [
+        {
+          "src": "angular/angular.js",
+          "dest": [
+            "js/lib/b-angular.js"
+          ]
+        }
+      ]
+    }
+  }
+}
