@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app/index.js",
   "dependencies": {
-    "jsnbt": "^1.0.70"
+    
   },
   "devDependencies": {
     "grunt": "*",

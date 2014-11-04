@@ -16,7 +16,6 @@
 *.suo
 *.dat
 *.user
-*.sln.docstates
 
 # Build results
 
