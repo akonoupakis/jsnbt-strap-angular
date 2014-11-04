@@ -10,6 +10,7 @@
 /_*
 
 *.sln
+*.cmd
 
 # User-specific files
 *.suo

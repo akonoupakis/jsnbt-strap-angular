@@ -5,7 +5,7 @@
 
     angular.module("jsnbt")
         .controller('AppController', function ($scope) {
-
+            
             $scope.user = null;
 
             $scope.pageId = $('head > meta[name="page"]').prop('content');
