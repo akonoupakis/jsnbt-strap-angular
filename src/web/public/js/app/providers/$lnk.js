@@ -15,16 +15,16 @@
                         build: function (language, page, pointer) {
 
                             if (page.entity === 'pointer') {
-                                return page.active[language] ? page.url[language] : undefined;
+                                return page.enabled[language] ? page.url[language] : undefined;
                             }
                             else {
 
                                 if (page.domain === 'core') {
-                                    return page.active[language] ? page.url[language] : undefined;
+                                    return page.enabled[language] ? page.url[language] : undefined;
                                 }
                                 else {
                                     if (pointer) {
-                                        if (pointer.active[language] && page.active[language]) {
+                                        if (pointer.enabled[language] && page.enabled[language]) {
                                             var pointerNodeIndex = page.hierarchy.indexOf(pointer.pointer.nodeId);
                                             if (pointerNodeIndex !== -1) {
                                                 var cropUrlIndex = pointerNodeIndex + 1;
