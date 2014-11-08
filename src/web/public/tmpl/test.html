@@ -42,7 +42,7 @@
     <script type="text/javascript" src="js/init.min.js"></script>
     <!-- @endif -->
 </head>
-<body ng-controller="AppController" ng-init="setTexts('common', 'country', 'aboutLabel')">    
+<body ng-controller="AppController" ng-init="setTexts('common', 'country', 'language', 'aboutLabel')">
     <section>
         <div class="container">
             hello world
@@ -54,6 +54,21 @@
             about translated text: {{ text.aboutLabel }}
             <br />
             country el translated text: {{ text.country.GR }}
+            <hr />
+            children:
+            <ul>
+                <li ng-repeat="child in children">
+                    <a href="{{ child.url }}">{{ child.name }} ({{ child.id }})</a>
+                </li>
+            </ul>
+            <hr />
+            other languages:
+            <ul>
+                <li ng-repeat="localizedUrl in localizedUrls">
+                    <label>{{ text.language[localizedUrl.language] }}</label>
+                    <a href="{{ localizedUrl.url }}">{{ localizedUrl.url }}</a>
+                </li>
+            </ul>
         </div>
     </section>
 </body>

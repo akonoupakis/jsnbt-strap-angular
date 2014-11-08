@@ -15,7 +15,8 @@
     "jquery": "~2.1.1",
     "angular": "~1.3.0",
 	"angular-sanitize": "~1.3.0",
-	"underscore": "~1.7.0"
+	"underscore": "~1.7.0",
+	"underscore.string": "~2.3.2"
   },
   "deploy": {
     "jquery": {
@@ -54,6 +55,16 @@
           "src": "underscore/underscore.js",
           "dest": [
             "js/lib/underscore/underscore.js"
+          ]
+        }
+      ]
+    },
+	"underscore.string": {
+      "files": [
+        {
+          "src": "underscore.string/lib/underscore.string.js",
+          "dest": [
+            "js/lib/underscore/underscore.string.js"
           ]
         }
       ]

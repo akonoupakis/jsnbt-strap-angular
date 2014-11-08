@@ -4,6 +4,9 @@
 
     "use strict";
 
-    angular.module('jsnbt', jsnbt.modules);
+    angular.module('jsnbt', [])
+    .config(function () {
+
+    });
 
 })();    

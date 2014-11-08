@@ -1,21 +1,15 @@
 ﻿<!DOCTYPE html>
-<html lang="<%= language %>">
+<html lang="<%= language %>" ng-controller="AppController">
 <head>
     <base href="<%= baseHref %>" />
     <meta charset="utf-8" />
 
-    <% if(robots !== '') { %><meta name="robots" content="<%= robots %>" />
-    <% } %>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
 
     <!--meta-->
     <title><%= meta.title %></title>
     <meta name="keywords" content="<%= meta.keywords %>" />
     <meta name="description" content="<%= meta.description %>" />
-
-    <meta name="page" content="<%= nodeId %>" />
-    <meta name="pointer" content="<%= pointerId %>" />
 
     <!-- @if NODE_ENV='DEVELOPMENT' -->
     <link rel="stylesheet" href="css/style.css" />
@@ -42,19 +36,7 @@
     <script type="text/javascript" src="js/init.min.js"></script>
     <!-- @endif -->
 </head>
-<body ng-controller="AppController" ng-init="setTexts('common', 'country', 'aboutLabel')">    
-    <section>
-        <div class="container">
-            hello world
-            <br />
-            page: {{ pageId }}, {{ pageUrl }}
-            <br />
-            pointer: {{ pointerId }}, {{ pointerUrl }}
-            <br />
-            about translated text: {{ text.aboutLabel }}
-            <br />
-            country el translated text: {{ text.country.GR }}
-        </div>
-    </section>
+<body>
+    <h1><b><%= error %></b> <%= text %></h1>
 </body>
 </html>
