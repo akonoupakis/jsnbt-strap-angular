@@ -4,6 +4,7 @@
     "use strict";
 
     angular.module("jsnbt")
+        // the $text is used to fetch localized text resources in a structural representation by group
         .provider("$text", function () {
 
             return {

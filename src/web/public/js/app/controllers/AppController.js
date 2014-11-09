@@ -12,8 +12,8 @@
 
             // hold the $context parameters available in $scope
             $scope.language = $context.language;
-            $scope.pageId = $context.pageId;
-            $scope.pointerId = $context.pointerId;
+            $scope.pageId = $context.page;
+            $scope.pointerId = $context.pointer;
 
             // hold the localized resources available in $scope.
             $scope.text = {};

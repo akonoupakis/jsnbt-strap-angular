@@ -4,6 +4,9 @@
     "use strict";
 
     angular.module("jsnbt")
+        // the $link is used to build up a url for a given node
+        // urls coming on the node objects from dpd do not always hold the full url, especially when pointed through a pointer node
+        // the $link helps combining the urls of the two to form a full valid url for a node, for a given language
         .provider("$link", function () {
 
             return {

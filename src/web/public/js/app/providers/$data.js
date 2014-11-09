@@ -4,6 +4,7 @@
     "use strict";
 
     angular.module("jsnbt")
+        // the $data is a quick transformation of the dpd to a class with the relevant methods returning promises
         .provider("$data", function () {
 
             return {

@@ -3,8 +3,12 @@
 (function () {
 
     "use strict";
+    
+    // inject here any angualr modules your site may need
+    var modules = [];
 
-    angular.module('jsnbt', [])
+    // initiate the jsnbt main module
+    angular.module('jsnbt', modules)
     .config(function () {
 
     });
