@@ -8,9 +8,9 @@
     .config(function ($routeProvider) {
 
         $routeProvider.
-            when('/layout', {
-                templateUrl: 'tmpl/public/pages/layout.html',
-                controller: 'LayoutController'
+            when('/extra', {
+                templateUrl: 'tmpl/public/pages/extra.html',
+                controller: 'ExtraController'
             });
 
     });
