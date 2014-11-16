@@ -15,9 +15,13 @@ module.exports = {
             name: 'extra',
             url: '/extra',
         }],
-        dashboard: 'tmpl/public/specs/dashboard.html',
-        content: 'tmpl/public/specs/content.html',
-        settings: 'tmpl/public/specs/settings.html'
+        dashboard: 'tmpl/public/injects/dashboard.html',
+        content: 'tmpl/public/injects/content.html',
+        settings: 'tmpl/public/injects/settings.html'
+    },
+
+    layouts: {
+        global: 'tmpl/public/layouts/common.html'
     },
 
     templates: [{

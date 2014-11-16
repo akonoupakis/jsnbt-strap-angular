@@ -12,6 +12,7 @@
 
             // hold the $context parameters available in $scope
             $scope.language = $context.language;
+            $scope.layoutId = $context.layout;
             $scope.pageId = $context.page;
             $scope.pointerId = $context.pointer;
 
@@ -19,6 +20,7 @@
             $scope.text = {};
 
             // hold the flattened objects that will be injected into $scope
+            $scope.layout = null;
             $scope.page = null;            
             $scope.pointer = null;
 
@@ -87,6 +89,15 @@
             getAvailableLanguages().then(function (languageCodes) {
 
                 $scope.languages = languageCodes;
+
+                // get layout
+                if ($scope.layoutId && $scope.layoutId !== '') {
+                    $data.layouts.get({ layout: $scope.layoutId }).then(function (results) {
+                        var layout = _.first(results);
+                        if (layout) 
+                            $scope.layout = $scope.flat(layout);
+                    });
+                }
 
                 // get page and pointer nodes
                 $data.nodes.get({

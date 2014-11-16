@@ -12,12 +12,14 @@
                 $get: function () {
 
                     var ctx = {
+                        // the current language code (got from the page html tag)
+                        language: $('html').prop('lang'),
+                        // the current layout name (got from the page meta tags)
+                        layout: $('head > meta[name="layout"]').prop('content'),
                         // the current page id (got from the page meta tags)
                         page: $('head > meta[name="page"]').prop('content'),
                         // the current pointer id (got from the page meta tags)
-                        pointer: $('head > meta[name="pointer"]').prop('content'),
-                        // the current language code (got from the page html tag)
-                        language: $('html').prop('lang')
+                        pointer: $('head > meta[name="pointer"]').prop('content')
                     };
 
                     return ctx;
