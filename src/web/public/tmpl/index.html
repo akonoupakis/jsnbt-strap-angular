@@ -43,18 +43,10 @@
     <script type="text/javascript" src="js/init.min.js"></script>
     <!-- @endif -->
 </head>
-<body ng-controller="AppController" ng-init="setTexts('common', 'country', 'aboutLabel')">    
+<body ng-controller="AppController" ng-init="setTexts('header', 'footer')">
     <section>
         <div class="container">
             hello world
-            <br />
-            page: {{ pageId }}, {{ pageUrl }}
-            <br />
-            pointer: {{ pointerId }}, {{ pointerUrl }}
-            <br />
-            about translated text: {{ text.aboutLabel }}
-            <br />
-            country el translated text: {{ text.country.GR }}
         </div>
     </section>
 </body>
