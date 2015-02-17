@@ -3,10 +3,12 @@ module.exports = {
     domain: 'public',
 
     public: true,
+    
+    //locale: 'en',
+
+    //ssl: true,
 
     //restricted: true,
-
-    //locale: 'en',
 
     injects: {
         navigation: [{
@@ -20,15 +22,38 @@ module.exports = {
         settings: 'tmpl/public/injects/settings.html'
     },
 
-    layouts: {
-        global: 'tmpl/public/layouts/common.html'
-    },
+    layouts: [{
+        id: 'common',
+        name: 'common layout',
+        form: 'tmpl/public/layouts/common.html'
+    }],
+
+    containers: [{
+        id: 'sampleContainer',
+        name: 'sample container',
+        html: '/tmpl/partials/containers/sampleContainer.html',
+    }],
 
     templates: [{
-        path: '/tmpl/index.html',
+        id: 'home',
+        name: 'home page',
+        html: '/tmpl/index.html',
+        form: 'tmpl/public/forms/node/home.html',
         restricted: ['page']
-    }, {
-        path: '/tmpl/test.html'
+    }],
+
+    lists: [{
+        id: 'sampleList',
+        name: 'Sample List',
+        form: 'tmpl/public/forms/list/sampleList.html',
+        localized: true,
+        permissions: [{
+            role: 'public',
+            crud: ['R']
+        }, {
+            role: 'admin',
+            crud: ['C', 'R', 'U', 'D']
+        }]
     }]
 
 };
