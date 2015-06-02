@@ -14,9 +14,8 @@
     <meta name="keywords" content="<%= meta.keywords %>" />
     <meta name="description" content="<%= meta.description %>" />
 
-    <meta name="layout" content="<%= layout %>" />
-    <meta name="page" content="<%= nodeId %>" />
-    <meta name="pointer" content="<%= pointerId %>" />
+    <% _.each(params, function(p) { %><meta name="<%= p.name %>" content="<%= p.content %>" />
+    <% }); %>
 
     <!-- @if NODE_ENV='DEVELOPMENT' -->
     <link rel="stylesheet" href="css/style.css" />

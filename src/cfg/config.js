@@ -1,14 +1,14 @@
 module.exports = {
-
-    domain: 'public',
-
-    public: true,
-    
+        
     //locale: 'en',
 
     //ssl: true,
 
     //restricted: true,
+
+    fileGroups: [],
+
+    images: [],
 
     injects: {
         navigation: [{

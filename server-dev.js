@@ -1,6 +1,19 @@
-var config = require('./config.js');
 var app = require('jsnbt/src/app/app.js');
 var index = require('./src/app/index.js');
 
-app.init('dev', config, index);
-app.start();
+app.init({
+    title: 'dev'
+}, index);
+
+var server = app.createServer({
+    env: 'dev',
+    host: 'localhost',
+    port: 3000,
+    db: {
+        host: 'localhost',
+        port: 27017,
+        name: 'dbname'
+    }
+});
+
+server.start();

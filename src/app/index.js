@@ -1,27 +1,49 @@
+var app = null;
+
 module.exports = {
     
-    init: function (appplication) {
-        // init any custom modules here
+    domain: 'public',
+
+    public: true,
+
+    init: function (application) {
+        app = application;
     },
 
     getConfig: function () {
-        return require('./config.js');
+        return require('../cfg/config.js');
     },
 
-    route: function (ctx, next) {
+    getVersion: function () {
+        return require('../../package.json').version;
+    },
+
+    getBower: function () {
+        return require('../web/bower.json');
+    },
+
+    route: function (server, ctx, next) {
         // intercept the routing process here, or trigger the next router        
 
         next();
     },
 
+    routeCustom: function (server, ctx, next) {
+        // custom route from router node
+
+        next();        
+    },
+
     view: {
 
-        prerender: function (ctx) {
-            // change here the ctx.model and the ctx.tmpl before rendering
+        preparse: function (server, ctx, preparsingContext, next) {
+            // change here the preparsingContext.model and the preparsingContext.tmpl before rendering
+            next(preparsingContext);
         },
 
-        render: function (ctx) {
-            // change here the ctx.html upon render
+        postparse: function (server, ctx, postparsingContext, next) {
+            // change here the postparsingContext.html upon render
+            next(postparsingContext);
         }
 
     }
