@@ -4,7 +4,6 @@
     "use strict";
 
     angular.module("jsnbt")
-        // the $data is a quick transformation of the dpd to a class with the relevant methods returning promises
         .provider("$data", function () {
 
             return {
@@ -24,7 +23,7 @@
                                 if (typeof (arg) !== 'function')
                                     params.push(arg);
                             });
-                            params.push(function (result, error) {
+                            params.push(function (error, result) {
                                 if (error) {
                                     if (error.status) {
                                         if (!double) {
@@ -38,7 +37,7 @@
 
                                             if (authCodes[error.status]) {
                                                 $rootScope.$broadcast(authCodes[error.status], function () {
-                                                    dpd[name][fn].apply(dpd[name][fn], getPromiseParams(true));
+                                                    jsnbt.db[name][fn].apply(jsnbt.db[name][fn], getPromiseParams(true));
                                                 });
                                             }
                                             else {
@@ -60,7 +59,7 @@
                             return params;
                         };
 
-                        dpd[name][fn].apply(dpd[name][fn], getPromiseParams());
+                        jsnbt.db[name][fn].apply(jsnbt.db[name][fn], getPromiseParams());
 
                         return deferred.promise;
                     };
@@ -85,8 +84,8 @@
                         };
                     };
 
-                    for (var dpdName in dpd) {
-                        register(dpdName);
+                    for (var dbName in jsnbt.db) {
+                        register(dbName);
                     }
 
                     return Data;

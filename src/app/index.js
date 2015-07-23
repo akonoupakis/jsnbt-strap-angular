@@ -4,8 +4,6 @@ module.exports = {
     
     domain: 'public',
 
-    public: true,
-
     init: function (application) {
         app = application;
     },
@@ -26,6 +24,18 @@ module.exports = {
         // intercept the routing process here, or trigger the next router        
 
         next();
+    },
+
+    routeNode: function (server, ctx, resolved, next) {
+
+        if (ctx.restricted) {
+            // intercepted here, could redirect to a login page
+            next();
+        }
+        else {
+            next();
+        }
+
     },
 
     routeCustom: function (server, ctx, next) {

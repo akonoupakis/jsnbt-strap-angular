@@ -3,9 +3,7 @@ module.exports = {
     //locale: 'en',
 
     //ssl: true,
-
-    //restricted: true,
-
+    
     fileGroups: [],
 
     images: [],
@@ -34,7 +32,45 @@ module.exports = {
         html: '/tmpl/partials/containers/sampleContainer.html',
     }],
 
+    scripts: [{
+        name: 'lib',
+        items: [
+            '/js/lib/angular.js',
+            '/js/lib/jquery.js',
+            '/js/lib/underscore.js',
+            '/js/lib/underscore.string.js'
+        ]
+    }, {
+        name: 'app',
+        items: [
+            '/jsnbt.js',
+            '/js/app/main.js',
+            '/js/app/controllers/AppController.js',
+            '/js/app/controllers/StoreController.js',
+            '/js/app/controllers/StoresController.js',
+            '/js/app/directives/ctrlMap.js',
+            '/js/app/providers/$context.js',
+            '/js/app/providers/$data.js',
+            '/js/app/providers/$image.js',
+            '/js/app/providers/$jsnbt.js',
+            '/js/app/providers/$link.js',
+            '/js/app/providers/$text.js',
+            '/js/init.js'
+        ]
+    }],
+
     templates: [{
+        id: 'error',
+        name: 'error page',
+        html: '/error/error.html',
+        restricted: [''],
+        scripts: [
+            ['lib', 'app']
+        ],
+        styles: [
+            ['lib', 'app']
+        ]
+    }, {
         id: 'home',
         name: 'home page',
         html: '/tmpl/index.html',
@@ -54,6 +90,12 @@ module.exports = {
             role: 'admin',
             crud: ['C', 'R', 'U', 'D']
         }]
-    }]
+    }],
+
+    register: function () {
+
+        return require('../../config.json');
+
+    }
 
 };

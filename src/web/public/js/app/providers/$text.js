@@ -4,7 +4,6 @@
     "use strict";
 
     angular.module("jsnbt")
-        // the $text is used to fetch localized text resources in a structural representation by group
         .provider("$text", function () {
 
             return {
@@ -18,7 +17,7 @@
 
                             var matches = typeof (match) === 'string' ? [match] : match;
 
-                            dpd.texts.get({
+                            jsnbt.db.texts.get({
                                 $or: [{
                                     key: {
                                         $in: matches
@@ -28,7 +27,7 @@
                                         $in: matches
                                     }
                                 }]
-                            }, function (results, error) {
+                            }, function (error, results) {
                                 if (error) {
                                     deferred.reject(error);
                                 }
