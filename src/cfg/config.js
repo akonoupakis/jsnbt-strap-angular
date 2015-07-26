@@ -38,7 +38,8 @@ module.exports = {
             '/js/lib/jquery.js',
             '/js/lib/angular.js',
             '/js/lib/underscore.js',
-            '/js/lib/underscore.string.js'
+            '/js/lib/underscore.string.js',
+            '/js/lib/angular-sanitize.js'
         ]
     }, {
         name: 'app',
