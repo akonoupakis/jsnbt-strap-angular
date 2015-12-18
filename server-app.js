@@ -1,5 +1,5 @@
 var hosts = require('./hosts.json');
-var app = require('jsnbt');
+var app = new require('jsnbt/app')();
 
 app.init();
 

@@ -4,7 +4,7 @@
     "use strict";
 
     angular.module("jsnbt")
-        .controller('AppController', function ($scope, $q, $jsnbt, $context, $data, $text, $link) {
+        .controller('AppController', function ($scope, $q, $jsnbt, $context, $data, $text, $url) {
             
             // hold the page and pointer objects as is from the db
             var page = null;
@@ -117,11 +117,11 @@
                         // assign $scope page variable
                         $scope.page = $scope.flat(pageResult);
                         // assign $scope pageUrl variable
-                        $scope.pageUrl = $link.build($scope.language, pageResult, pointerResult);
+                        $scope.pageUrl = $url.build($scope.language, pageResult, pointerResult);
 
                         $($scope.languages).each(function (li, lang) {
                             if (lang !== $scope.language) {
-                                var targetLink = $link.build(lang, pageResult, pointerResult);
+                                var targetLink = $url.build(lang, pageResult, pointerResult);
                                 if(targetLink){
                                     $scope.localizedUrls.push({
                                         language: lang,
@@ -138,7 +138,7 @@
                         // assign $scope pointer variable
                         $scope.pointer = $scope.flat(pointerResult);
                         // assign $scope pointerUrl variable
-                        $scope.pointerUrl = $link.build($scope.language, pointerResult);
+                        $scope.pointerUrl = $url.build($scope.language, pointerResult);
                     }
                 }, function (error) {
                     throw error;
@@ -151,7 +151,7 @@
                         }).then(function (childrenResults) {
                             // fill $scope.children array with some data for our loop
                             $(childrenResults).each(function (c, child) {
-                                var childUrl = $link.build($scope.language, child, pointer);
+                                var childUrl = $url.build($scope.language, child, pointer);
                                 var childFlat = $scope.flat(child);
 
                                 $scope.children.push({
