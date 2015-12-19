@@ -7,15 +7,19 @@
     
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-preprocess": "*",
-    "grunt-env": "*"
+    "chalk": "*",
+    "gulp": "*",
+    "del": "*",
+    "gulp-util": "*",
+    "gulp-preprocess": "*",
+    "gulp-less": "*",
+    "gulp-rename": "*",
+    "gulp-minify-css": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-ng-templates": "*",
+    "gulp-htmlmin": "*",
+    "run-sequence": "*",
+    "event-stream": "*"
   }
 }
