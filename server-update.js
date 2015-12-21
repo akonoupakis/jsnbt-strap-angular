@@ -1,17 +1,16 @@
 var hosts = require('./hosts.json');
-var config = require('./config.json');
-var Server = require('./server.js');
+var Server = require('./migrator.js');
 
 var server = new Server({
     web: {
-        host: hosts.web.host,
-        port: hosts.web.port
+        host: hosts.upd.host,
+        port: hosts.upd.port
     },
     db: {
         host: hosts.db.host,
         port: hosts.db.port,
         name: hosts.db.name
     }
-}, config);
+});
 
 server.start();
