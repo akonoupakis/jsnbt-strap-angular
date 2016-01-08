@@ -8,7 +8,6 @@
     "chalk": "*",
     "del": "*",
     "event-stream": "*",
-    "gitflow-publisher": "^1.0.2",
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-htmlmin": "*",
