@@ -3,23 +3,22 @@
   "version": "1.0.112",
   "description": "",
   "main": "src/app/index.js",
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
     "chalk": "*",
-    "gulp": "*",
     "del": "*",
-    "gulp-util": "*",
-    "gulp-preprocess": "*",
-    "gulp-less": "*",
-    "gulp-rename": "*",
-    "gulp-minify-css": "*",
+    "event-stream": "*",
+    "gitflow-publisher": "^1.0.2",
+    "gulp": "*",
     "gulp-concat": "*",
-    "gulp-uglify": "*",
-    "gulp-ng-templates": "*",
     "gulp-htmlmin": "*",
-    "run-sequence": "*",
-    "event-stream": "*"
+    "gulp-less": "*",
+    "gulp-minify-css": "*",
+    "gulp-ng-templates": "*",
+    "gulp-preprocess": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "run-sequence": "*"
   }
 }
