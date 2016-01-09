@@ -1,23 +1,23 @@
 {
-  "name": "jsnbt-strap-angular",
-  "version": "1.0.112",
-  "description": "",
-  "main": "src/app/index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "chalk": "*",
-    "del": "*",
-    "event-stream": "*",
-    "gulp": "*",
-    "gulp-concat": "*",
-    "gulp-htmlmin": "*",
-    "gulp-less": "*",
-    "gulp-minify-css": "*",
-    "gulp-ng-templates": "*",
-    "gulp-preprocess": "*",
-    "gulp-rename": "*",
-    "gulp-uglify": "*",
-    "gulp-util": "*",
-    "run-sequence": "*"
-  }
+	"name": "jsnbt-strap-angular",
+	"version": "1.0.122-pre3",
+	"description": "",
+	"main": "src/app/index.js",
+	"dependencies": {},
+	"devDependencies": {
+		"chalk": "*",
+		"del": "*",
+		"event-stream": "*",
+		"gulp": "*",
+		"gulp-concat": "*",
+		"gulp-htmlmin": "*",
+		"gulp-less": "*",
+		"gulp-minify-css": "*",
+		"gulp-ng-templates": "*",
+		"gulp-preprocess": "*",
+		"gulp-rename": "*",
+		"gulp-uglify": "*",
+		"gulp-util": "*",
+		"run-sequence": "*"
+	}
 }
