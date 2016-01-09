@@ -161,3 +161,6 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+/www
+publish.js
+publish.targets.json

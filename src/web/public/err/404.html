@@ -4,9 +4,7 @@
     <base href="<%= baseHref %>" />
     <meta charset="utf-8" />
 
-    <% if(robots !== '') { %>
-    <meta name="robots" content="<%= robots %>" />
-    <% } %>
+    <meta name="robots" content="noindex,nofollow" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,12 +16,9 @@
     <% _.each(styles, function(file) { %>
     <link rel="stylesheet" href="<%= file %>" /><% }); %>
 </head>
-<body ng-init="setTexts('header', 'footer')">
-    <section>
-        <div class="container">
-            hello world
-        </div>
-    </section>
+<body>
+    <h1><b><%= error %></b> <%= text %></h1>
+
     <% _.each(scripts, function(file) { %>
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
 </body>

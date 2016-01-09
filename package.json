@@ -1,21 +1,23 @@
 {
-  "name": "jsnbt-strap-angular",
-  "version": "1.0.1",
-  "description": "",
-  "main": "src/app/index.js",
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-preprocess": "*",
-    "grunt-env": "*"
-  }
+	"name": "jsnbt-strap-angular",
+	"version": "1.0.122",
+	"description": "",
+	"main": "src/app/index.js",
+	"dependencies": {},
+	"devDependencies": {
+		"chalk": "*",
+		"del": "*",
+		"event-stream": "*",
+		"gulp": "*",
+		"gulp-concat": "*",
+		"gulp-htmlmin": "*",
+		"gulp-less": "*",
+		"gulp-minify-css": "*",
+		"gulp-ng-templates": "*",
+		"gulp-preprocess": "*",
+		"gulp-rename": "*",
+		"gulp-uglify": "*",
+		"gulp-util": "*",
+		"run-sequence": "*"
+	}
 }
