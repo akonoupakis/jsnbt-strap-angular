@@ -1,6 +1,6 @@
 {
 	"name": "jsnbt-strap-angular",
-	"version": "1.0.124",
+	"version": "1.0.125",
 	"description": "",
 	"main": "src/app/index.js",
 	"dependencies": {},
